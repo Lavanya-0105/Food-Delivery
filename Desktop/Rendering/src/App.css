@@ -1,0 +1,561 @@
+/* Base Resets */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+.restaurant-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header Styles */
+.main-header {
+  margin-bottom: 40px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logo-brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ff6b6b;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.nav-links span {
+  cursor: pointer;
+  transition: color 0.2s;
+  padding-bottom: 4px;
+}
+
+.nav-links span:hover {
+  color: #ff6b6b;
+}
+
+.active-link {
+  color: #ff6b6b;
+  border-bottom: 2px solid #ff6b6b;
+}
+
+.cart-nav-badge {
+  background: #1e293b;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.cart-nav-badge:hover {
+  background: #0f172a;
+  color: white !important;
+}
+
+.active-cart {
+  background: #ff6b6b;
+}
+
+/* Filter Button Layout */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.filter-btn {
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.filter-btn.active {
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+  color: white;
+}
+
+/* Hero / Home Section Styles */
+.hero-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 480px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin: 0 0 16px 0;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin: 0 auto 30px auto;
+  max-width: 600px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.explore-menu-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.explore-menu-btn:hover {
+  background-color: #fa5252;
+  transform: translateY(-2px);
+}
+
+/* Split View Layout Configuration */
+.main-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.menu-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  flex-grow: 1;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.menu-grid.shrink-grid {
+  grid-template-columns: repeat(2, 1fr);
+  flex-basis: 55%;
+}
+
+.card-wrapper {
+  width: 100%;
+}
+
+/* Menu Item Card Styles */
+.recipe-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e2e8f0;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-info h3 {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+  font-size: 1.2rem;
+}
+
+.category-tag {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.add-btn {
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #0f172a;
+}
+
+/* Detail Side Drawer Panel */
+.detail-panel {
+  flex-basis: 45%;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  position: sticky;
+  top: 20px;
+  overflow: hidden;
+  animation: slideIn 0.25s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  z-index: 10;
+}
+
+.detail-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.detail-content {
+  padding: 24px;
+}
+
+.detail-category {
+  font-size: 0.85rem;
+  color: #ff6b6b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-content h2 {
+  margin: 8px 0;
+  font-size: 1.75rem;
+  color: #1e293b;
+}
+
+.detail-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.ingredients-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 12px 0 24px 0;
+}
+
+.ingredients-list li {
+  padding: 8px 0;
+  color: #475569;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+/* Checkout Page Layout Dashboard */
+.checkout-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.checkout-items-section {
+  flex-basis: 60%;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.checkout-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkout-item-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.checkout-item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.checkout-item-details {
+  flex-grow: 1;
+}
+
+.checkout-item-details h3 {
+  margin: 0 0 4px 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.checkout-item-meta {
+  margin: 0;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.checkout-item-subtotal {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.invoice-summary-card {
+  flex-basis: 40%;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.invoice-summary-card h2 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+/* Address Validation Field Styling */
+.address-section {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.address-section h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.required-star {
+  color: #ff6b6b;
+}
+
+.address-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.address-input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
+}
+
+.error-text {
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  margin-top: 6px;
+  display: block;
+  font-weight: 500;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0;
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.total-highlight {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ff6b6b;
+  border-top: 2px solid #f1f5f9;
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.payment-mode-section {
+  margin-top: 25px;
+}
+
+.payment-mode-section h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.payment-label:hover {
+  background-color: #f8fafc;
+}
+
+.payment-label.selected-mode {
+  border-color: #ff6b6b;
+  background-color: #fff5f5;
+  color: #ff6b6b;
+}
+
+.place-order-btn {
+  width: 100%;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 24px;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+  transition: background 0.2s;
+}
+
+.place-order-btn:hover:not(:disabled) {
+  background-color: #fa5252;
+}
+
+.place-order-btn:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.empty-msg {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Responsiveness breakpoints */
+@media (max-width: 950px) {
+  .main-layout,
+  .checkout-layout {
+    flex-direction: column;
+  }
+  .menu-grid,
+  .menu-grid.shrink-grid,
+  .checkout-items-section,
+  .invoice-summary-card,
+  .detail-panel {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .detail-panel {
+    position: relative;
+    top: 0;
+  }
+}
