@@ -43,7 +43,6 @@ export default function App() {
 
   return (
     <div className="restaurant-container">
-      {/* Navigation Header */}
       <header className="main-header">
         <div className="header-top">
           <h1 onClick={() => setCurrentView("home")} className="logo-brand">
@@ -90,7 +89,6 @@ export default function App() {
         )}
       </header>
 
-      {/* --- HOME VIEW --- */}
       {currentView === "home" && (
         <div className="hero-section">
           <div className="hero-content">
@@ -109,7 +107,6 @@ export default function App() {
         </div>
       )}
 
-      {/* --- MENU VIEW --- */}
       {currentView === "menu" && (
         <div className="main-layout">
           <ul className={`menu-grid ${selectedDish ? "shrink-grid" : ""}`}>
@@ -153,7 +150,6 @@ export default function App() {
         </div>
       )}
 
-      {/* --- CART VIEW --- */}
       {currentView === "cart" && (
         <div className="checkout-layout">
           <div className="checkout-items-section">

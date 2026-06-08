@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "./cartSlice";
 
 export default function CardSample({ dish }) {
-  const dispatch = useDispatch(); // Hook to dispatch Redux actions
+  const dispatch = useDispatch();
 
   return (
     <li className="recipe-card">
@@ -15,8 +15,8 @@ export default function CardSample({ dish }) {
           <button
             className="add-btn"
             onClick={(e) => {
-              e.stopPropagation(); // Stops the drawer from opening when clicking add
-              dispatch(addToCart(dish)); // Adds to global cart state
+              e.stopPropagation();
+              dispatch(addToCart(dish));
             }}
           >
             Add to Cart
