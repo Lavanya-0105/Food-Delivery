@@ -2,7 +2,7 @@
 
 A modern, fast, and fully responsive food delivery application built with React and Vite.
 
-> **Live Demo:** [View Live App on Vercel][food-delivery-nine-zeta.vercel.app](https://food-delivery-nine-zeta.vercel.app/)
+> **Live Demo:** [View Live App on Vercel](https://food-delivery-nine-zeta.vercel.app/)
 
 ---
 
